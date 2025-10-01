@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+
+<body>
+
+  <div class="dashboard-container">
+    <h1>Dashboard</h1>
+
+    <!-- Filtros -->
+    <div class="filtros">
+      <label for="mes">Mês:</label>
+      <input type="month" id="mes" value="2025-09">
+
+      <label for="vendedor">Vendedor:</label>
+      <select id="vendedor">
+        <option value="todos">Todos</option>
+        <option value="joao">João Victor</option>
+        <option value="maria">Maria Silva</option>
+        <option value="carlos">Carlos Souza</option>
+      </select>
+
+      <button id="aplicar-filtros">Aplicar</button>
+    </div>
+
+    <!-- Grid de Gráficos -->
+    <section class="charts-grid">
+      <div class="card">
+        <h3>Vendas por Dia</h3>
+        <canvas id="chartLinha"></canvas>
+      </div>
+      <div class="card">
+        <h3>Vendas por Categoria</h3>
+        <canvas id="chartBarras"></canvas>
+      </div>
+      <div class="card">
+        <h3>Ticket Médio</h3>
+        <canvas id="chartRosca"></canvas>
+      </div>
+      <div class="card">
+        <h3>Top Produtos</h3>
+        <canvas id="chartHbar"></canvas>
+      </div>
+    </section>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/scripts/dashboard.js"></script>
+  
+</body>
+
+</html>

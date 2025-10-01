@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f6fa;
+  color: #333;
+}
+
+.clientes-container {
+  margin-left: 170px;
+  padding: 20px 15px;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c7c63;
+}
+
+.form-cliente {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #2c7c63;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(44,124,99,0.15);
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.form-actions button {
+  padding: 8px 16px;
+  background: #2c7c63;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.form-actions button:hover {
+  background: #075c41;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 0.85rem;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #247c63;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #1f5c49;
+}
+
+td {
+  color: #444;
+}
+
+tr:hover td {
+  background: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .clientes-container {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
