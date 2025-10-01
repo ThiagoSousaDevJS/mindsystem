@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=pages/index.html">
-  <title>Redirecionando...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HOME | MIND SYSTEM</title>
+    <link rel="stylesheet" href="/styles/style2.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <p>Se não for redirecionado automaticamente, <a href="pages/index.html">clique aqui</a>.</p>
-</body>
+    <header>
+        <aside class="sidebar">
+
+            
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../assets/image/logo-mind-verde.svg" alt="MIND SYSTEM">
+                </a>
+            </div>
+
+            <!--Perfil do Usuário-->
+            <div class="perfil-lateral" id="perfil">
+                <img src="../assets/icon/icon-user.svg" alt="Foto do usuário">
+                <span id="user-info">Carregando...</span>
+                <span class="seta-perfil">‹</span>
+
+                <div class="dropdown-perfil" id="perfil-menu">
+                    <a href="#"><img src="../assets/icon/icon-config.svg" class="icon-perfil">Configurações</a>
+                    <a href="login.html"><img src="../assets/icon/icon-exit.svg" class="icon-perfil">Sair</a>
+                </div>
+            </div>
+
+            <!-- Menu Lateral -->
+            <ul class="menu-lateral">
+                <li><a href="#" data-page="dashboard.html"><img src="../assets/icon/icon-dashboard.svg"
+                            class="icon-menu">Dashboard</a></li>
+                <li><a href="#" data-page="clientes.html"><img src="../assets/icon/icon-clientes.svg"
+                            class="icon-menu">Clientes</a></li>
+                <!-- Item com submenu -->
+                <li class="has-submenu">
+                    <a href="#" aria-expanded="false"><img src="../assets/icon/icon-vendas.svg"
+                            class="icon-menu">Vendas<span class="seta-sub">‹</span></a>
+                    <ul class="submenu">
+                        <li><a href="#">Dados</a></li>
+                        <li><a href="#">Cabeçalho</a></li>
+                        <li><a href="#">Vender</a></li>
+                        <li><a href="#">Alertas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-page="pedidos.html"><img src="../assets/icon/icon-pedidos.svg"
+                            class="icon-menu">Pedidos</a></li>
+
+                <!-- Item com submenu -->
+                <li class="has-submenu">
+                    <a href="#" aria-expanded="false"><img src="../assets/icon/icon-relatorios.svg" class="icon-menu">
+                        Relatórios
+                        <span class="seta-sub">‹</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">Relatório de Vendas</a></li>
+                        <li><a href="#">Relatório de Clientes</a></li>
+                        <li><a href="#">Relatório de Desempenho</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button class="chat-toggle" id="chat-toggle">
+                <img src="/assets/icon/icon-chat.svg" class="icon-chat">Assistente Virtual
+            </button>
+
+            <!-- Chat Virtual -->
+            <div class="chatbot-container" id="chatbot">
+                <div class="chat-header">
+                    <img src="/assets/icon/icon-bot.svg" alt="Bot" class="bot-avatar">
+                    <span>Assistente Virtual</span>
+                </div>
+
+                <div class="chat-body" id="chat-body">
+                    <div class="message bot">Olá! Como posso te ajudar?</div>
+                </div>
+
+                <div class="chat-footer">
+                    <input type="text" placeholder="Digite sua mensagem..." id="user-input">
+                    <button id="send-btn">Enviar</button>
+                </div>
+            </div>
+        </aside>
+    </header>
+
+    <main id="conteudo">
+        <h1>Bem-vindo ao sistema.</h1>
+        <p>Utilize o menu lateral para acessar as funcionalidades disponíveis.</p>
+    </main>
+
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/perfil.js"></script>
+    <script src="../scripts/chat.js"></script>
+
 </html>
